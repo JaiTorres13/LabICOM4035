@@ -1,5 +1,7 @@
 package orderedStructures;
 
+import java.security.InvalidParameterException;
+
 public class Geometric extends Progression {
 
 	private double commonFactor; 
@@ -10,7 +12,10 @@ public class Geometric extends Progression {
 	}
 	
 	@Override
-	public double nextValue() {
+	public double nextValue() throws IllegalStateException {
+		if (firstVal == false) {
+			throw new InvalidParameterException("First Value is not executed previously");  
+		}
 		current = current * commonFactor; 
 		return current;
 	}

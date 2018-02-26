@@ -1,7 +1,10 @@
 package orderedStructures;
 
+import java.security.InvalidParameterException;
+
 public class Arithmetic extends Progression {
 	private double commonDifference; 
+	
 	
 	public Arithmetic(double firstValue, double commonDifference) { 
 		super(firstValue); 
@@ -9,7 +12,10 @@ public class Arithmetic extends Progression {
 	}
 	
 	@Override
-	public double nextValue() {
+	public double nextValue() throws IllegalStateException{
+		if (firstVal == false) {
+			throw new InvalidParameterException("First Value is not executed previously");  
+		}
 		current = current + commonDifference; 
 		return current;
 	}
