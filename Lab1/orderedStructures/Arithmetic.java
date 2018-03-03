@@ -2,7 +2,9 @@ package orderedStructures;
 
 import java.security.InvalidParameterException;
 
-public class Arithmetic extends Progression {
+import interfaces.Combinable;
+
+public class Arithmetic extends Progression implements Combinable {
 	private double commonDifference; 
 	
 	
@@ -28,6 +30,29 @@ public class Arithmetic extends Progression {
 	public double getTerm(int n) throws IndexOutOfBoundsException {
 		return firstValue() + commonDifference*(n - 1);
 	}
+	
+	
+
+	@Override
+	public Progression add(Progression p) {
+//		Progression other;
+//		other = (Progression) p.Arithmetic(firstValue(), commonDifference) + this.getTerm();
+//		return other;
+		return p;
+	}
+
+	@Override
+	public Progression substract(Progression p, Progression p1) {
+		// TODO Auto-generated method stub
+		return p;
+	}
+
+	@Override
+	public boolean equals(Progression p) {
+		return this.firstValue() == p.firstValue() && this.commonDifference == (p.getTerm(2) - p.firstValue()); 
+			
+	}
+	
 
 }
  

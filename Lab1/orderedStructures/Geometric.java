@@ -28,5 +28,10 @@ public class Geometric extends Progression {
 	public double getTerm(int n) throws IndexOutOfBoundsException {
 		return firstValue() * Math.pow(commonFactor, n - 1);
 	}
+
+	@Override
+	public boolean equals(Progression p) {
+		return this.firstValue() == p.firstValue() && this.commonFactor == (p.getTerm(2) / p.firstValue()); 
+	}
 	
 }

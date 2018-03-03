@@ -27,5 +27,9 @@ public class Fibonacci extends Progression {
 		prev = 0; 
 		return value; 
 	}
+	@Override
+	public boolean equals(Progression p) {
+		return this.nextValue() == p.nextValue();
+	}
 
 }
