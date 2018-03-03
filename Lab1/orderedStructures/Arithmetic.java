@@ -35,16 +35,14 @@ public class Arithmetic extends Progression implements Combinable {
 
 	@Override
 	public Progression add(Progression p) {
-//		Progression other;
-//		other = (Progression) p.Arithmetic(firstValue(), commonDifference) + this.getTerm();
-//		return other;
-		return p;
+		Progression other = new Arithmetic(this.firstValue() + p.firstValue(), this.commonDifference + (p.getTerm(2) - p.firstValue()));
+		return other;
 	}
 
 	@Override
-	public Progression substract(Progression p, Progression p1) {
-		// TODO Auto-generated method stub
-		return p;
+	public Progression substract(Progression p) {
+		Progression other = new Arithmetic(this.firstValue() - p.firstValue(), this.commonDifference - (p.getTerm(2) - p.firstValue()));
+		return other;
 	}
 
 	@Override

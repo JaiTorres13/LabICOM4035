@@ -2,7 +2,9 @@ package orderedStructures;
 
 import java.security.InvalidParameterException;
 
-public class Geometric extends Progression {
+import interfaces.Combinable;
+
+public class Geometric extends Progression implements Combinable{
 
 	private double commonFactor; 
 	
@@ -32,6 +34,18 @@ public class Geometric extends Progression {
 	@Override
 	public boolean equals(Progression p) {
 		return this.firstValue() == p.firstValue() && this.commonFactor == (p.getTerm(2) / p.firstValue()); 
+	}
+
+	@Override
+	public Progression add(Progression p) {
+		Progression other = new Geometric(this.firstValue() + p.firstValue(), this.commonFactor + (p.getTerm(2) / p.firstValue()));
+		return other;
+	}
+
+	@Override
+	public Progression substract(Progression p) {
+		Progression other = new Geometric(this.firstValue() - p.firstValue(), this.commonFactor - (p.getTerm(2) / p.firstValue()));
+		return other;
 	}
 	
 }
