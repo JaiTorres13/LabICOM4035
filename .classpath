@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="Lab1"/>
 	<classpathentry kind="src" path="ArrayList"/>
 	<classpathentry kind="src" path="Lab0"/>
+	<classpathentry kind="src" path="Lab2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
