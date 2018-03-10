@@ -2,9 +2,9 @@ package arrayIndexList;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;
-import indexList.IndexList;
+import indexList.IndexList1;
 
-public class ArrayIndexList<E> implements IndexList<E> {
+public class ArrayIndexList<E> implements IndexList1<E> {
 	private static final int INITCAP = 1; 
 	private static final int CAPTOAR = 1; 
 	private static final int MAXEMPTYPOS = 2; 

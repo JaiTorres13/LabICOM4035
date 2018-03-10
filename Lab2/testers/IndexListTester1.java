@@ -1,9 +1,9 @@
 package testers;
 
 import arrayIndexList.ArrayIndexList;
-import indexList.IndexList;
+import indexList.IndexList1;
 
-public class IndexListTester {
+public class IndexListTester1 {
 
 	/**
 	 * @param args
@@ -13,7 +13,7 @@ public class IndexListTester {
 				new ArrayIndexList<Integer>());	
 	}
 		
-	private static void listTester(String msg, IndexList<Integer>  list) { 
+	private static void listTester(String msg, IndexList1<Integer>  list) { 
 		System.out.println(msg);
 
 		try { 
@@ -75,7 +75,7 @@ public class IndexListTester {
 
 	}
 		
-	private static void showElement(IndexList<Integer> list, int position) { 
+	private static void showElement(IndexList1<Integer> list, int position) { 
 		try { 
 			System.out.println(" --Element in position " 
 					+ position + " is: "+ list.get(position)); 
@@ -85,7 +85,7 @@ public class IndexListTester {
 		}
 	}
 	
-	private static void showList(IndexList<Integer> list) { 
+	private static void showList(IndexList1<Integer> list) { 
 		System.out.println("\n*** The "+ list.size()+ " elements in the list are: "); 
 		int lpindex = list.size(); 
 		for (int i=0; i< lpindex; i++)
@@ -93,7 +93,7 @@ public class IndexListTester {
 		System.out.println("\n The capacity of the list is " + list.capacity() + "\n"); 
 	}
 	
-	private static void showListAfterDeleting(IndexList<Integer> list, int pos) { 
+	private static void showListAfterDeleting(IndexList1<Integer> list, int pos) { 
 		System.out.println("\n -- deleting element at position "+pos); 
 		try { 
 			Integer etr = list.remove(pos); 
@@ -105,7 +105,7 @@ public class IndexListTester {
 		}
 	}
 	
-	private static void showListAfterAdding(IndexList<Integer> list, int pos, Integer element) { 
+	private static void showListAfterAdding(IndexList1<Integer> list, int pos, Integer element) { 
 		System.out.println("\n -- adding value " + element+" at position "+pos); 
 		try { 
 			list.add(pos, element);  
@@ -116,7 +116,7 @@ public class IndexListTester {
 		}
 	}
 	
-	private static void showListAfterReplacing(IndexList<Integer> list, int pos, Integer element) { 
+	private static void showListAfterReplacing(IndexList1<Integer> list, int pos, Integer element) { 
 		System.out.println("\n -- replacing value at position "+pos+" by "+element); 
 		try { 
 			Integer etr = list.set(pos, element);  

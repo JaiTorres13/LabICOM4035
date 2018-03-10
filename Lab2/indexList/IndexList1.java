@@ -1,6 +1,6 @@
 package indexList;
 
-public interface IndexList<T> { 
+public interface IndexList1<T> { 
 	/** Determines the size of the current list instance. 
 	 * @return number of elements in the list
 	 **/ 
