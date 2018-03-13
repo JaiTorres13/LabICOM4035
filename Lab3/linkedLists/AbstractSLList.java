@@ -1,6 +1,6 @@
 package linkedLists;
 
-public abstract class AbstractSLList<E> implements LinkedList<E> {
+public abstract class AbstractSLList<E> extends AbstractLinkedList<E> implements LinkedList<E> {
 	/**
 	 * Class to represent a node of the type used in singly linked lists. 
 	 * @author pedroirivera-vega

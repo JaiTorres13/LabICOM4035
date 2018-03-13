@@ -1,6 +1,6 @@
 package linkedLists;
 
-public abstract class AbstractDLList<E> implements LinkedList<E> {
+public abstract class AbstractDLList<E> extends AbstractLinkedList<E> implements LinkedList<E> {
 	/**
 	 * Class to represent a node of the type used in doubly linked lists. 
 	 * @author pedroirivera-vega
