@@ -16,28 +16,17 @@ public class EnteroTester {
 	private static ArrayList<Sorter<Entero>> sortersList = new ArrayList<>(); 
 	
 	public static void main(String[] args) { 
-//		DataGenerator gen = new DataGenerator(10);
-//		Integer[] data = gen.generateData();
-//		Entero[] testArr = new Entero[10];
-//		
-//		for(int i = 0; i < 10; i ++) {
-//			testArr[i] = new Entero(data[i]);
-//			System.out.println(data[i]);
-//		}
-//		
-//		BubbleSortSorter<Entero> sort = new BubbleSortSorter<>();
-//		sort.sort(testArr, null);
 		
 		sortersList.add(new BubbleSortSorter<Entero>()); 
 		sortersList.add(new SelectionSortSorter<Entero>()); 
 		sortersList.add(new InsertionSortSorter<Entero>()); 
 		
-		test("Sorting Using Default Comparator<Integer>", null); 
+		test("Sorting Using Default Comparator<Integer>",null); 
 //		test("Sorting Using IntegerComparator1", new IntegerComparator1()); 
 //		test("Sorting Using IntegerComparator2", new IntegerComparator2()); 
 	}
 	
-	private static void test(String msg, Comparator<Entero> cmp) { 
+	private static void test(String msg,  Comparator<Entero> cmp) { 
 		rnd = new Random(101); 
 
 		System.out.println("\n\n*******************************************************");
