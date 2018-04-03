@@ -5,9 +5,9 @@ import interfaces.Queue;
 /** 
    A partial implementation of the Queue using a singly linked list with references 
    to the first and to the last node.
-**/
+ **/
 public class SLLQueue<E> implements Queue<E> {
-       // inner class for nodes in singly linked lists
+	// inner class for nodes in singly linked lists
 	private static class Node<E> {   
 		private E element; 
 		private Node<E> next; 
@@ -42,7 +42,7 @@ public class SLLQueue<E> implements Queue<E> {
 	}	
 	private Node<E> first, last;   // references to first and last node
 	private int size; 
-	
+
 	public SLLQueue() {           // initializes instance as empty queue
 		first = last = null; 
 		size = 0; 
@@ -72,9 +72,10 @@ public class SLLQueue<E> implements Queue<E> {
 		if (size == 0) 
 			first = last = nuevo; 
 		else { 
-		last.setNext(nuevo);
-		last = nuevo;
+			last.setNext(nuevo);
+			last = nuevo;
 		}
 		size++; 
 	}
+
 }

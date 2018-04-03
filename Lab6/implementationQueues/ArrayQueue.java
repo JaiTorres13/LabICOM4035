@@ -55,7 +55,7 @@ public class ArrayQueue<E> implements Queue<E> {
 		}
 		elements = t;
 		first = 0;
-		
+
 	}
 }
 
