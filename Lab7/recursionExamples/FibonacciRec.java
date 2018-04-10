@@ -4,10 +4,18 @@ package recursionExamples;
 public class FibonacciRec {
 
 public static void main(String[] args) {
-		
-		
-		fib(50);
+		//tester
+	long startTime = System.nanoTime();  // Measure system’s clock time before.
 		fib1(50);
+	long endTime = System.nanoTime(); 
+	 long elapsedTime = endTime - startTime;
+	 System.out.println(elapsedTime);
+	 long startTime1 = System.nanoTime();  // Measure system’s clock time before.
+		fib(50);
+	long endTime1 = System.nanoTime(); 
+	 long elapsedTime1 = endTime1 - startTime1;
+	 System.out.println(elapsedTime1);
+		
 		
 	}
 	public static long fib(int n) { 
