@@ -39,9 +39,7 @@ public class SLLtest {
 		list1.addFirst(4);
 		list1.addFirst(3);
 		
-		System.out.println(list1);
-		System.out.println("List after using lessThan method");
-		System.out.println(list1.lessThan(6));
+		
 		
 		System.out.println("List after using ConsecutiveIncreasingPairs method:");
 		System.out.print(list1.consecutiveIncreasingPairs());

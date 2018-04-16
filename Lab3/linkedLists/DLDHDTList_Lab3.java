@@ -4,11 +4,11 @@ import java.util.NoSuchElementException;
 
 import linkedLists.AbstractSLList.SNode;
 
-public class DLDHDTList<E> extends AbstractDLList<E> {
+public class DLDHDTList_Lab3<E> extends AbstractDLList<E> {
 	private DNode<E> header, trailer; 
 	private int length; 
 	
-	public DLDHDTList() { 
+	public DLDHDTList_Lab3() { 
 		 header = new DNode<>();   // node with null fields
 		   trailer = new DNode<>();  // node with null fields
 		   header.setNext(trailer);  // link the two nodes to each other  
