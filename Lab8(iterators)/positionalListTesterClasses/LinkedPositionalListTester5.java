@@ -6,13 +6,13 @@ import java.util.Iterator;
 import interfaces.Position;
 import llPositionalList.L2FIteratorMaker;
 import llPositionalList.LinkedPositionalList;
+import llPositionalList.MyLinkedPositionalList;
 import llPositionalList.PLIteratorF2L;
 
 public class LinkedPositionalListTester5 {
 
 	public static void main(String[] args) {
-		LinkedPositionalList<Integer> list1 = null; 
-				// new LinkedPositionalList<>(new L2FIteratorMaker<Integer>()); 
+		MyLinkedPositionalList<Integer> list1 = new MyLinkedPositionalList<>(new L2FIteratorMaker<Integer>()); 
 
 		Position<Integer> f = list1.addFirst(1); 
 		Position<Integer> l = list1.addLast(10);
@@ -36,7 +36,7 @@ public class LinkedPositionalListTester5 {
 		showList("After removing even numbers, list1 = ", list1); 
 	}
 
-	private static void removeEvenValues(LinkedPositionalList<Integer> list) {
+	private static void removeEvenValues(MyLinkedPositionalList<Integer> list) {
 		Iterator<Integer> iter = list.iterator(); 
 		while (iter.hasNext())
 			if (iter.next() % 2 == 0)
@@ -44,7 +44,7 @@ public class LinkedPositionalListTester5 {
 		
 	}
 
-	private static void showList(String msg, LinkedPositionalList<Integer> list) {
+	private static void showList(String msg, MyLinkedPositionalList<Integer> list) {
 		System.out.print(msg); 
 		for (Position<Integer> v : list.positions()) 
 			System.out.print(v.getElement() + " "); 
