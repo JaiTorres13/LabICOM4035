@@ -4,6 +4,7 @@ package positionalListTesterClasses;
 import java.util.Iterator;
 
 import interfaces.Position;
+import llPositionalList.ElementBackwardIterator;
 import llPositionalList.LinkedPositionalList;
 
 public class LinkedPositionalListTester2 {
@@ -55,7 +56,7 @@ public class LinkedPositionalListTester2 {
 
 	private static void showList2(String msg, LinkedPositionalList<Integer> list) {
 		System.out.print(msg); 
-		Iterator<Integer> iter = list.iterator(); 
+		Iterator<Integer> iter = new ElementBackwardIterator<Integer>(list);
 		while (iter.hasNext())
 			System.out.print(iter.next() + " "); 
 		System.out.println(" -- size = " + list.size()); 

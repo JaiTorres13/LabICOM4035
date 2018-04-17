@@ -10,9 +10,12 @@ import interfaces.PositionalList;
 
 public class LinkedPositionalList<E> implements PositionalList<E> {
 
+	private static Object self;
+	
 	private static class DNode<E> implements Position<E> { 
 		private E element; 
 		private DNode<E> prev, next;
+		private Object owner;
 		public E getElement() {
 			return element;
 		}
@@ -20,6 +23,7 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
 			this.element = element;
 			this.prev = prev;
 			this.next = next;
+			this.owner = self;
 		}
 		public DNode(E element) {
 			this(element, null, null);
@@ -60,12 +64,13 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
 		header.setNext(trailer);
 		trailer.setPrev(header); 
 		size = 0; 
+		self = this;
 	}
 
 	private DNode<E> validate(Position<E> p) throws IllegalArgumentException { 
 		try { 
 			DNode<E> dp = (DNode<E>) p; 
-			if (dp.getPrev() == null || dp.getNext() == null) 
+			if (dp.getPrev() == null || dp.getNext() == null || this != dp.owner) 
 				throw new IllegalArgumentException("Invalid internal node."); 
 			
 			return dp; 
@@ -172,8 +177,8 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
 	public Iterator<E> iterator() {
 		return new ElementIterator();
 	}
-
 	
+
 	// Implementation of Iterator and Iterable...
 	private class PositionIterator implements Iterator<Position<E>> {
 		private DNode<E> cursor = header.getNext(), 
@@ -224,7 +229,7 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
 		public void remove() throws IllegalStateException { 
 			posIterator.remove();
 		}
-	}
+	}     
 	
 	private class PositionIterable implements Iterable<Position<E>> {
 
