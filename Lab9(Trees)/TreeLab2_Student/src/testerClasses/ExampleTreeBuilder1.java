@@ -1,13 +1,14 @@
-package testerClasses;
+package TreeLab2_Student.src.testerClasses;
 
 import labUtils.Utils;
 import treeClasses.LinkedBinaryTree;
+import treeClasses.LinkedTree;
 import treeInterfaces.Position;
 
-public class ExampleTreeBuilder2 {
+public class ExampleTreeBuilder1 {
 
 	public static void main(String[] args) {
-		LinkedBinaryTree<Integer> t = Utils.buildExampleTreeAsLinkedBinaryTree(); 
+		LinkedTree<Integer> t = Utils.buildExampleTreeAsLinkedTree(); 
 
 		// display content as a tree
 		Utils.displayTree("The tree is: ", t); 

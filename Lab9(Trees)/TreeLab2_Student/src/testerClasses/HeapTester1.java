@@ -1,4 +1,4 @@
-package testerClasses;
+package TreeLab2_Student.src.testerClasses;
 
 import heap.Heap;
 
