@@ -14,12 +14,12 @@ public class TreeTester6 {
 		t.insert(17); 
 		t.insert(4); 
 		t.insert(9); 
-		t.insert(45); 
-		t.insert(30); 
 		t.insert(7); 
 		t.insert(19); 
 		t.insert(21); 
 		t.insert(40); 
+		t.insert(45); 
+		t.insert(30); 
 
 		// display content as a tree
 		Utils.displayTree("The structure of the tree is: ", t);

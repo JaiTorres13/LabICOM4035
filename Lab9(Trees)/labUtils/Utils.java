@@ -39,8 +39,20 @@ public class Utils {
 	
 	public static LinkedBinaryTree<Integer> buildExampleTreeAsLinkedBinaryTree() { 
 		LinkedBinaryTree<Integer> t = new LinkedBinaryTree<>(); 
-		// ADD CODE AS SPECIFIED IN EXERCISE 2
 		
+		Position<Integer> root = t.addRoot(4);
+		Position<Integer> child1 = t.addLeft(root, 9);
+		Position<Integer> child2 = t.addRight(root, 20);
+		t.addLeft(child1, 7);
+		t.addRight(child1, 10);
+		Position<Integer> child3 =	t.addLeft(child2, 15);
+		Position<Integer> child4 = t.addRight(child2, 21);
+		t.addLeft(child3, 12);
+		Position<Integer> child5 = t.addRight(child3, 17);
+		t.addLeft(child5, 19);
+		Position<Integer> child6 = t.addRight(child4, 40);
+		t.addLeft(child6, 30);
+		t.addRight(child6, 45);
 		
 		return t; 
 	}
