@@ -13,5 +13,6 @@
 	<classpathentry kind="src" path="Lab7"/>
 	<classpathentry kind="src" path="Lab8(iterators)"/>
 	<classpathentry kind="src" path="Lab9(Trees)"/>
+	<classpathentry kind="src" path="Lab10(PriorityQueues)"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

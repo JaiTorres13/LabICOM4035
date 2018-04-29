@@ -10,3 +10,5 @@ Lab 5: Stacks
 Lab 6: Queues
 Lab 7: Recursion
 Lab 8: Iterators
+Lab 9: Trees
+Lab 10: Priority Queues
