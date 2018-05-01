@@ -15,6 +15,9 @@ public class TesterUtils {
 			pq.insert(n, null); 
 
         // MISSING LINES HERE --- JUST 2 LINES
+		for(int i = 0; i < arr.length; i++)
+			arr[i] = pq.removeMin().getKey();
+			
 	}
 
 }

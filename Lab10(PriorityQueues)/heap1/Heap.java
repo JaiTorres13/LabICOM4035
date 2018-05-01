@@ -99,7 +99,10 @@ public class Heap<E> extends CompleteBinaryTree<E> {
 			}
 
 			// CODE IS MISSING HERE ... ADD THE CORRECT CODE
-			
+			if (cmp.compare(minChild.getElement(), r.getElement()) < 0) { 
+				swapPositionsInList(r, minChild);   // r is now son of minChild....
+				downHeap(r); 
+			}
 		}
 	}
 
